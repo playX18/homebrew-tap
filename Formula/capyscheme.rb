@@ -8,18 +8,18 @@ class Capyscheme < Formula
   on_macos do
     on_arm do
       url "https://github.com/playX18/capyscheme/releases/download/v3.0.0/capyscheme-3.0.0-aarch64-apple-darwin.tar.gz"
-      sha256 "3bb2abb69ebb27fbfe63c7639624c6ec5e331b841a5bc8c3ebc10b9285e90877"
+      sha256 "dbc08febd11ac77cfaad3803496a0f375c10e107e3db395cae2d9b3c7453eb4d"
     end
   end
 
   on_linux do
     on_intel do
       url "https://github.com/playX18/capyscheme/releases/download/v3.0.0/capyscheme-3.0.0-x86_64-unknown-linux-gnu.tar.gz"
-      sha256 "3bb2abb69ebb27fbfe63c7639624c6ec5e331b841a5bc8c3ebc10b9285e90877"
+      sha256 "d53de4b61e9343a7986566788062b7be7b9587e4c9b786dcecf43a36f6eb232c"
     end
     on_arm do
       url "https://github.com/playX18/capyscheme/releases/download/v3.0.0/capyscheme-3.0.0-aarch64-unknown-linux-gnu.tar.gz"
-      sha256 "3bb2abb69ebb27fbfe63c7639624c6ec5e331b841a5bc8c3ebc10b9285e90877"
+      sha256 "7d05792811553b9f83dfa84cda568e52bac6f03eefeca04f7300306012af633e"
     end
   end
 
