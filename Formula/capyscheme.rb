@@ -2,24 +2,24 @@
 class Capyscheme < Formula
   desc "R6RS/R7RS Scheme compiler and runtime"
   homepage "https://github.com/playX18/capyscheme"
-  version "3.0.1"
+  version "3.0.2"
   license "LGPL-3.0-only"
 
   on_macos do
     on_arm do
-      url "https://github.com/playX18/capyscheme/releases/download/v3.0.1/capyscheme-3.0.1-aarch64-apple-darwin.tar.gz"
-      sha256 "54e3c9a762940e29dcabcdffd55894df035aced6976ece4bfe5bd96df2c181f5"
+      url "https://github.com/playX18/capyscheme/releases/download/v3.0.2/capyscheme-3.0.2-aarch64-apple-darwin.tar.gz"
+      sha256 "b40ab22e97ace8a1d6a2db777ddd17c89dda7fb10ce11edb9ed0dabf2c27bbf8"
     end
   end
 
   on_linux do
     on_intel do
-      url "https://github.com/playX18/capyscheme/releases/download/v3.0.1/capyscheme-3.0.1-x86_64-unknown-linux-gnu.tar.gz"
-      sha256 "a02fdbb86f6f6e7695ed156d8ee6280f5616d7dd6a6830d623742952e9f06719"
+      url "https://github.com/playX18/capyscheme/releases/download/v3.0.2/capyscheme-3.0.2-x86_64-unknown-linux-gnu.tar.gz"
+      sha256 "586a5a37f1c91c10f895b0a8e1864badd18209451960b81cb4697c0291a7e1aa"
     end
     on_arm do
-      url "https://github.com/playX18/capyscheme/releases/download/v3.0.1/capyscheme-3.0.1-aarch64-unknown-linux-gnu.tar.gz"
-      sha256 "4416c54de61499444687b9d95922fc2548b2e0c4073d39ba9a48c1948c31a097"
+      url "https://github.com/playX18/capyscheme/releases/download/v3.0.2/capyscheme-3.0.2-aarch64-unknown-linux-gnu.tar.gz"
+      sha256 "11361effadbca2d578e703ea3a91447dbc716100a0d1c2126489775100582bed"
     end
   end
 
