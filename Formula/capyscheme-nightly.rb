@@ -2,24 +2,24 @@
 class CapyschemeNightly < Formula
   desc "R6RS/R7RS Scheme compiler and runtime (nightly build)"
   homepage "https://github.com/playX18/capyscheme"
-  version "3.1.0-nightly.20261028"
+  version "3.1.0-nightly.20261031"
   license "LGPL-3.0-only"
 
   on_macos do
     on_arm do
       url "https://github.com/playX18/capyscheme/releases/download/nightly/capyscheme-nightly-aarch64-apple-darwin.tar.gz"
-      sha256 "a0d863db9392c2829d58fc47e8c288108b6aacac05ed3e7d261acd15261b6c4b"
+      sha256 "e7ba1778e4731f4f2a3cb1f933ee8e865d76f6ed7a6ca03a44da06bc93cda056"
     end
   end
 
   on_linux do
     on_intel do
       url "https://github.com/playX18/capyscheme/releases/download/nightly/capyscheme-nightly-x86_64-unknown-linux-gnu.tar.gz"
-      sha256 "bb8859797a402c788f30d49c690ee6e5f2cac782e77dcd00c643695797c95753"
+      sha256 "37fc1c7cc4592622e815a2ac65783b1098c13dbf993acf14a99f1fc30dce61ee"
     end
     on_arm do
       url "https://github.com/playX18/capyscheme/releases/download/nightly/capyscheme-nightly-aarch64-unknown-linux-gnu.tar.gz"
-      sha256 "e0ee5ea9bad54a4edb0586da59942a9175cc4b4458dff9e96c8ac07df5198168"
+      sha256 "81c5d508018bc5c61c4ce5c3f5426c97622b75b49da511147d1d5abd18b1fab1"
     end
   end
 
@@ -41,17 +41,14 @@ class CapyschemeNightly < Formula
   test do
     capy = bin/"capy-nightly"
 
-    # Arithmetic, including bignums.
     assert_match "246913578024691357802469135780",
                  shell_output("#{capy} -c '(display (* 123456789012345678901234567890 2))'")
 
-    # Bundled R6RS / SRFI libraries are found through the wrapper.
     assert_match "(2 4 6)",
                  shell_output("#{capy} -c '(import (rnrs) (srfi :1)) (write (map (lambda (x) (* 2 x)) (iota 3 1)))'")
     assert_match "55",
                  shell_output("#{capy} -c '(import (rnrs) (srfi :1)) (display (fold + 0 (iota 11)))'")
 
-    # Running a script file that uses records and string ports.
     (testpath/"hello.scm").write <<~SCHEME
       (import (rnrs))
       (define-record-type point (fields x y))
@@ -66,7 +63,6 @@ class CapyschemeNightly < Formula
     assert_match(/^7$/, output)
     assert_match(/^capy$/, output)
 
-    # An uncaught error exits non-zero.
     shell_output("#{capy} -c '(error (quote test) \"boom\")' 2>&1", 1)
 
     # The compiler driver is installed and executable.
