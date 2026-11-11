@@ -2,24 +2,24 @@
 class CapyschemeNightly < Formula
   desc "R6RS/R7RS Scheme compiler and runtime (nightly build)"
   homepage "https://github.com/playX18/capyscheme"
-  version "3.1.0-nightly.20261109"
+  version "3.1.0-nightly.20261111"
   license "LGPL-3.0-only"
 
   on_macos do
     on_arm do
       url "https://github.com/playX18/capyscheme/releases/download/nightly/capyscheme-nightly-aarch64-apple-darwin.tar.gz"
-      sha256 "9a71208636ad9d9e7eb66eab64e8b3801044aa9e04eec23a0e2787a4f99b5fcb"
+      sha256 "b206ae1376099f96f3f28bffdd83a41ee34af742a896933f714fcace9ca2671c"
     end
   end
 
   on_linux do
     on_intel do
       url "https://github.com/playX18/capyscheme/releases/download/nightly/capyscheme-nightly-x86_64-unknown-linux-gnu.tar.gz"
-      sha256 "5f63a4b57d8924f4a1d6a2f2cd9c38aea5e6359bf1335f5e4b394e8bb4c892be"
+      sha256 "d932918d776bab1968a1e841b2e373e2aef65b13c7ef668ca5b7ee5942df0d70"
     end
     on_arm do
       url "https://github.com/playX18/capyscheme/releases/download/nightly/capyscheme-nightly-aarch64-unknown-linux-gnu.tar.gz"
-      sha256 "8085fd040032fffaf20c300d00fe56bbdc9cafe9d13bcbeab4cad465197b1394"
+      sha256 "ea9d7761ea3cfa147b9b5d47bfd1ce7400a2c23e513a0a53753442c9a8a3eac7"
     end
   end
 
